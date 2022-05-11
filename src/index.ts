@@ -3,6 +3,7 @@ import { GeneratorConfig } from "partials/config";
 import moduleGenerator from './module.generator';
 import serviceGenerator from './service.generator';
 import { toTitleCase, pluralize } from './helpers';
+import controllerGenerator from "controller.generator";
 
 const generator = (
 	plop: NodePlopAPI,
@@ -15,10 +16,12 @@ const generator = (
 
 	const module = moduleGenerator(config, plop);
 	const service = serviceGenerator(config, plop);
+	const controller = controllerGenerator(config, plop);
 
 	plop.setDefaultInclude({ generators: true });
 	plop.setGenerator("module", module);
 	plop.setGenerator("service", service);
+	plop.setGenerator("controller", controller);
 };
 
 export default generator;
