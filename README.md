@@ -26,7 +26,7 @@ colonel(plop, defaultConfig);
 so your `plopfile.js` could look e.g. like this
 
 ```javascript
-const atomicGenerator =
+const colonel =
   require("@nicolasey/plop-colonel").default;
 
 const config = plop => {
@@ -60,7 +60,7 @@ plop controller
 
 ## Questions
 
-Report bugs or provide feedback by filing [issues][issues]
+Report bugs or provide feedback by filling [issues][issues]
 
 ## License
 
