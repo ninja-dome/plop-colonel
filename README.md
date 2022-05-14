@@ -1,6 +1,6 @@
 # plop generators for Colonel NestJS
 
-_An opinionated [`plop`][plop] generator for [`nestjs`][nestjs] with Colonel opinions._
+_An opinionated [`plop`][plop] generator for NestJS Colonel boilerplate._
 
 ## Installation
 
