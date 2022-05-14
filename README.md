@@ -27,7 +27,7 @@ so your `plopfile.js` could look e.g. like this
 
 ```javascript
 const atomicGenerator =
-  require("@a9g/plop-generator-react-atomic-component").default;
+  require("@nicolasey/plop-colonel").default;
 
 const config = plop => {
   colonel(plop);
@@ -38,7 +38,7 @@ module.exports = config;
 
 ## Generators
 
-Now you'll have access to the `atomic-component` generator as shown below.
+Now you'll have access to the `plop-colonel` generator as shown below.
 
 ### Create a new module
 
