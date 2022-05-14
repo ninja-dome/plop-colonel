@@ -1,13 +1,7 @@
 import path from 'node:path'
-import { NodePlopAPI } from "node-plop";
-import { GeneratorConfig } from 'partials/config';
-
 const CURRENT_DIR = path.resolve(__dirname);
 
-const moduleGenerator = (
-	config: Partial<GeneratorConfig>,
-	plop: NodePlopAPI
-) => {
+const moduleGenerator = () => {
   const description = 'Module generator';
   const prompts = [
     {

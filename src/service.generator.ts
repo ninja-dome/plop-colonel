@@ -1,13 +1,7 @@
 import path from 'node:path'
-import { NodePlopAPI } from "node-plop";
-import { GeneratorConfig } from 'partials/config';
-
 const CURRENT_DIR = path.resolve(__dirname);
 
-const serviceGenerator = (
-	config: Partial<GeneratorConfig>,
-	plop: NodePlopAPI
-) => {
+const serviceGenerator = () => {
   const description = 'Service generator';
   const prompts = [
     {

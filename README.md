@@ -1,54 +1,26 @@
-# plop generator react atomic component
+# plop generators for Colonel NestJS
 
-_An opinionated [`plop`][plop] generator for [`typescript`][typescript] [`atomic`][atomic] [`react`][react] components._
+_An opinionated [`plop`][plop] generator for [`nestjs`][nestjs] with Colonel opinions._
 
 ## Installation
 
 This package is hosted on [`npm`][npm].
 
 ```bash
-npm install --save-dev @a9g/plop-generator-react-atomic-component
+npm install --save-dev @nicolasey/plop-colonel
 ```
 
 ## Usage
 
-First, create two interfaces to include classnames or styles (depending on if you are using react-native or not) to include them into your props. h
-
-```typescript
-import { StyleProp, ViewStyle } from "react-native";
-
-export interface PropsWithClassName {
-  className?: string;
-}
-
-export interface PropsWithStyle {
-  style?: StyleProp<ViewStyle>;
-}
-```
+You need to install Colonel NestJS based project. Those generators are specific.
 
 Afterwards, be sure you have [`plop`][plop] installed. Then, add the following lines to your `plopfile.js`.
 
 ```javascript
-const atomicGenerator =
-  require("@a9g/plop-generator-react-atomic-component").default;
+const colonel =
+  require("@nicolasey/plop-colonel").default;
 
-const defaultConfig = {
-  createIndex: true,
-  functional: true,
-  basePath: "src/ui/components",
-  withClassnameInterfaceImportPath: "/framework/ui", //make sure to configure this path
-  withStyleInterfaceImportPath: "/framework/ui",
-  tests: true,
-  stories: true,
-  styledComponents: true,
-  useNative: false, // native and macro can't be used together
-  useMacro: false,
-  typeFormatter: "pascaleCase",
-  fileNameFormatter: "pascaleCase",
-  dirNameFormatter: "pascaleCase"
-};
-
-atomicGenerator(plop, defaultConfig);
+colonel(plop, defaultConfig);
 ```
 
 so your `plopfile.js` could look e.g. like this
@@ -57,84 +29,33 @@ so your `plopfile.js` could look e.g. like this
 const atomicGenerator =
   require("@a9g/plop-generator-react-atomic-component").default;
 
-const defaultConfig = {
-  createIndex: true,
-  functional: true,
-  basePath: "src/ui/components",
-  withClassnameInterfaceImportPath: "/framework/ui", //make sure to configure this path
-  withStyleInterfaceImportPath: "/framework/ui",
-  tests: true,
-  stories: true,
-  styledComponents: true,
-  useNative: false,
-  useMacro: false,
-  typeFormatter: "pascaleCase",
-  fileNameFormatter: "pascaleCase",
-  dirNameFormatter: "pascaleCase"
-};
-
 const config = plop => {
-  atomicGenerator(plop, defaultConfig);
+  colonel(plop);
 };
 
 module.exports = config;
 ```
 
+## Generators
+
 Now you'll have access to the `atomic-component` generator as shown below.
 
+### Create a new module
+
 ```bash
-plop atomic-component
+plop module
 ```
 
-```text
-src
-└── ui
-   └── components
-      └── $Type
-         └── $ComponentName
-            ├── $ComponentName.tsx
-            ├── $ComponentName.test.tsx (optional)
-            ├── $ComponentName.stories.tsx (optional)
-            ├── $ComponentName.styles.tsx (optional)
-            └── index.tsx (optional)
+### Create a new service within a module
+
+```bash
+plop service
 ```
 
-## Configuration
+### Create a new service within a controller
 
-```typescript
-export interface GeneratorConfig {
-  createIndex: boolean; //create an index file
-  functional: boolean; //should the template be functional or class based?
-  basePath: string; //where do you want to store the generated files
-  withClassnameInterfaceImportPath: string; //from where can we import the classname interface
-  withStyleInterfaceImportPath: string; //from where can we import the styles interface
-  tests: boolean; //create test files
-  stories: boolean; //create story files
-  styledComponents: boolean; //use styled components
-  useNative: boolean; //use react native
-  useMacro: boolean; // use styled components macro import. native and macro can't be used together
-  templateIndex?: string; //path to the corresponding files, need to be an absolute path
-  templateStory?: string;
-  templateStyles?: string;
-  templateTest?: string;
-  templateComponentFunctional?: string;
-  templateComponentClassBased?: string;
-  typeFormatter?: FileNameFormatters;
-  fileNameFormatter?: FileNameFormatters;
-  dirNameFormatter?: FileNameFormatters;
-}
-```
-
-### FileNameFormatters
-
-```typescript
-export enum FileNameFormatters {
-  "pascalCase" = "pascalCase",
-  "camelCase" = "camelCase",
-  "kebabCase" = "kebabCase",
-  "snakeCase" = "snakeCase",
-  "lowerCase" = "lowerCase"
-}
+```bash
+plop controller
 ```
 
 ## Questions
@@ -150,4 +71,4 @@ MIT see [license.md](license.md)
 [plop]: https://plopjs.com
 [react]: https://reactjs.org
 [typescript]: https://typescriptlang.org
-[atomic]: https://atomicdesign.bradfrost.com/
+[colonel]: https://github.com/nicolasey/colonel/

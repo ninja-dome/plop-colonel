@@ -4,9 +4,9 @@
   "description": "plop generator for NestJS Colonel boilerplate",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
-  "author": "André Hoendgen <hello@andre-hoendgen.de> (andre-hoendgen.de)",
+  "author": "Nicolas Seynaeve <nicolas.sey@gmail.com> (@nicolasey)",
   "license": "MIT",
-  "repository": "https://github.com/ahoendgen/plop-generator-react-atomic-component",
+  "repository": "https://github.com/nicolasey/plop-colonel",
   "keywords": [
     "nestjs",
     "typescript",
