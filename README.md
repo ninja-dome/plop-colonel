@@ -1,6 +1,6 @@
 # plop generator react atomic component
 
-_An opinionated [`plop`][plop] generator for [`typescript`][typescript] [`atomic`][atomic] [`react`][react] components._
+_An opinionated [`plop`][plop] generator for [`nestjs`][nestjs] with Colonel opinions._
 
 ## Installation
 
