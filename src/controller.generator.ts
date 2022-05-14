@@ -1,13 +1,7 @@
 import path from 'node:path'
-import { NodePlopAPI } from "node-plop";
-import { GeneratorConfig } from 'partials/config';
-
 const CURRENT_DIR = path.resolve(__dirname);
 
-const controllerGenerator = (
-  config: Partial<GeneratorConfig>,
-  plop: NodePlopAPI,
-) => {
+const controllerGenerator = () => {
   const description = 'Adds a controller in a module';
   const prompts = [
     {
