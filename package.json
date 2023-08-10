@@ -51,7 +51,7 @@
     "node-plop": "^0.30.0"
   },
   "volta": {
-    "node": "16.13.1",
+    "node": "16.20.2",
     "yarn": "1.22.17"
   },
   "publishConfig": {
