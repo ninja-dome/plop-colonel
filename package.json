@@ -48,7 +48,7 @@
     "*.{ts,tsx,css,md,json,js}": "prettier --write"
   },
   "dependencies": {
-    "node-plop": "^0.30.0"
+    "node-plop": "^0.32.0"
   },
   "volta": {
     "node": "16.13.1",
